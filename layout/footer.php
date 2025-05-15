@@ -1,0 +1,1 @@
+<p>&copy; 2025 Library Management System</p>
