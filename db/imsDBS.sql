@@ -7,7 +7,7 @@ CREATE TABLE Users (
     UserName VARCHAR(100) NOT NULL,
     Password VARCHAR(255) NOT NULL, -- Use hashed passwords
     Role ENUM('admin', 'staff', 'student') NOT NULL,
-    Email VARCHAR(255) UNIQUE,
+    Email VARCHAR(191) UNIQUE,
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -41,7 +41,7 @@ CREATE TABLE Lending (
     BookId INT NOT NULL,
     BorrowerId INT NOT NULL,
     StaffId INT, -- Staff who issued the book
-    BorrowDate DATE NOT NULL DEFAULT CURRENT_DATE,
+    BorrowDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     DueDate DATE NOT NULL,
     ReturnDate DATE,
     Status ENUM('borrowed', 'returned', 'late') DEFAULT 'borrowed',

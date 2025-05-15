@@ -4,8 +4,8 @@
         <h1>Library Management System</h1>
       </li>
       <li>
-        <?php
-        ?>
+      <button id="theme-toggle">Toggle Theme</button>
+
       </li>
       <li>
         <form>
